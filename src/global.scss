@@ -1,0 +1,32 @@
+/* SCSS Variables */
+$mainColor: #15023a;
+$maxMobileWidth: 575px;
+$maxSmallWidth: 767px;
+$maxMediumWidth: 991px;
+$maxLargeWidth: 1200px;
+
+/* Mixins */
+/** Mobile Screen */
+@mixin maxMobile {
+  @media (max-width: #{$maxMobileWidth}) {
+    @content;
+  }
+}
+/** below Small Screen */
+@mixin maxSmall {
+  @media (max-width: #{$maxSmallWidth}) {
+    @content;
+  }
+}
+/** below Medium Screen */
+@mixin maxMedium {
+  @media (max-width: #{$maxMediumWidth}) {
+    @content;
+  }
+}
+/** below Large Screen */
+@mixin maxLarge {
+  @media (max-width: #{$maxLargeWidth}) {
+    @content;
+  }
+}

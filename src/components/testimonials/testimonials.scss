@@ -1,0 +1,100 @@
+@import "../../global.scss";
+
+.testimonials {
+  background-color: white;
+  display: grid;
+  grid-template-rows: 1fr 80% 5%;
+  place-content: center;
+  h2 {
+    font-size: 50px;
+    justify-self: center;
+    @include maxMedium {
+      font-size: 40px;
+    }
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include maxMedium {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card {
+      width: 260px;
+      height: 80%;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px -8px black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      transition: all 0.5s ease;
+      @include maxMedium {
+        width: 90% !important;
+        max-width: 500px;
+        height: 160px !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      &.featured {
+        width: 320px;
+        margin: 0 30px;
+        height: 90%;
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+      .top {
+        display: flex;
+        align-items: center;
+        @include maxMedium {
+          display: none;
+        }
+        img {
+          &.left,
+          &.right {
+            width: 25px;
+            cursor: pointer;
+          }
+          &.user {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 30px;
+          }
+        }
+      }
+      .center {
+        padding: 10px;
+        background-color: rgb(250, 244, 245);
+        border-radius: 10px;
+        line-height: 1.6;
+        @include maxMedium {
+          width: 100%;
+          font-size: 14px;
+          text-align: center;
+        }
+        @include maxMobile {
+          font-size: 12px;
+        }
+      }
+      .bottom {
+        text-align: center;
+        @include maxMedium {
+          margin-top: 10px;
+        }
+        h3 {
+          margin-bottom: 5px;
+          font-size: 16px;
+        }
+        h4 {
+          color: rgb(121, 115, 115);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

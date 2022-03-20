@@ -1,0 +1,103 @@
+@import "../../global.scss";
+.contact {
+  .wrapper {
+    height: calc(100% - 40px);
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    @include maxSmall {
+      flex-direction: column;
+    }
+    .left {
+      flex: 1;
+      @include maxSmall {
+        flex: 0.5;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: 40px;
+      }
+      form {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        @include maxSmall {
+          height: 80%;
+        }
+        input,
+        textarea {
+          width: 300px;
+          padding: 10px;
+          font-size: 14px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          caret-color: crimson;
+          transition: all 0.3s ease;
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 10px #ccc;
+          }
+        }
+        input {
+          height: 30px;
+        }
+        textarea {
+          height: 200px;
+          resize: none;
+          @include maxSmall {
+            height: 150px;
+          }
+        }
+        button {
+          width: 150px;
+          height: 30px;
+          background-color: crimson;
+          color: white;
+          font-weight: 500;
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        span {
+          color: green;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .copyright {
+    height: 40px;
+    line-height: 20px;
+    background-color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+    a {
+      text-decoration: none;
+      color: crimson;
+      font-weight: 600;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

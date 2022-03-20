@@ -1,0 +1,85 @@
+@import "../../global.scss";
+
+.intro {
+  display: flex;
+  @include maxMedium {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    flex: 1;
+    overflow: hidden;
+    .img-container {
+      width: 700px;
+      height: 700px;
+      background-color: crimson;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      float: right;
+      @include maxMedium {
+        align-items: flex-start;
+      }
+      img {
+        max-width: 80%;
+        @include maxMedium {
+          height: 50%;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .wrapper {
+      margin-left: 50px;
+      @include maxMobile {
+        margin-left: 0;
+        text-align: center;
+      }
+      h2 {
+        font-size: 60px;
+        @include maxMobile {
+          font-size: 40px;
+        }
+      }
+      h3 {
+        font-size: 30px;
+        @include maxMobile {
+          font-size: 20px;
+        }
+        span {
+          color: crimson;
+        }
+        .ityped-cursor {
+          opacity: 1;
+          animation: blinking 0.5s infinite;
+        }
+        @keyframes blinking {
+          to {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: arrow-blink 2s infinite;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      @keyframes arrow-blink {
+        to {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
